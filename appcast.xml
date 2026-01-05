@@ -1,28 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
     <channel>
-        <title>The Portrait Lab Updates</title>
-        <link>https://theportraitlab.co</link>
-        <description>Updates for The Portrait Lab</description>
-        <language>en</language>
-
+        <title>The Portrait Lab</title>
         <item>
-            <title>Version 1.6</title>
-            <description><![CDATA[
-                <h2>Version 1.6</h2>
-                <ul>
-                    <li>Fixed credit purchase button in Settings</li>
-                    <li>Various improvements and bug fixes</li>
-                </ul>
-            ]]></description>
-            <pubDate>Fri, 03 Jan 2026 12:00:00 -0500</pubDate>
-            <enclosure
-                url="https://github.com/hurd300403/theportraitlab-releases/releases/download/v1.6/ThePortraitLab-v1.6.dmg"
-                sparkle:version="1.6"
-                sparkle:shortVersionString="1.6"
-                length="0"
-                type="application/octet-stream" />
+            <title>1.7</title>
+            <pubDate>Mon, 05 Jan 2026 12:34:23 -0500</pubDate>
+            <sparkle:version>1</sparkle:version>
+            <sparkle:shortVersionString>1.7</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/hurd300403/theportraitlab-releases/releases/download/v1.7/ThePortraitLab-v1.7.dmg" length="28832646" type="application/octet-stream" sparkle:edSignature="y1I58Jx1xVbgJusOe3LiD/L0V/2Sdxc38Pod+23/xB0S+c5NTb5fFMP+W4sUY9iHNFhla9V8KgNNJzbfBofMCA=="/>
         </item>
     </channel>
 </rss>
