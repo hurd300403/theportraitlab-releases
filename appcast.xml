@@ -3,13 +3,13 @@
     <channel>
         <title>The Portrait Lab</title>
         <item>
-            <title>1.8</title>
-            <pubDate>Thu, 08 Jan 2026 11:25:39 -0500</pubDate>
-            <sparkle:version>1</sparkle:version>
-            <sparkle:shortVersionString>1.8</sparkle:shortVersionString>
+            <title>1.9.2</title>
+            <pubDate>Mon, 12 Jan 2026 20:54:05 -0500</pubDate>
+            <sparkle:version>1.9.2</sparkle:version>
+            <sparkle:shortVersionString>1.9.2</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
-            <sparkle:releaseNotesLink>https://hurd300403.github.io/theportraitlab-releases/ThePortraitLab-v1.8.html</sparkle:releaseNotesLink>
-            <enclosure url="https://github.com/hurd300403/theportraitlab-releases/releases/download/v1.8/ThePortraitLab-v1.8.dmg" length="28945871" type="application/octet-stream" sparkle:edSignature="npLBLrJFC0jcJ/Ozo7nXmQGprM+TF4NED2gzFPRQY3vz9v5/eutF3HLrxAmjVO0uG4xbMOC2Xsq6nc7WKHTvCw=="/>
+            <sparkle:releaseNotesLink>https://hurd300403.github.io/theportraitlab-releases/ThePortraitLab-v1.9.2.html</sparkle:releaseNotesLink>
+            <enclosure url="https://github.com/hurd300403/theportraitlab-releases/releases/download/v1.9.2/ThePortraitLab-v1.9.2.dmg" length="28948373" type="application/octet-stream" sparkle:edSignature="rxlJRB4PnmzNk5r2CoiCy/ZsAK9LcE7kYDzVA08PhAphgXM4sMyW8Dkx8JNbNy2H79QUXE3peSx8c/023HtUBw=="/>
         </item>
     </channel>
 </rss>
