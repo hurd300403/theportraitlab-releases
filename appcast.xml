@@ -3,16 +3,26 @@
     <channel>
         <title>The Portrait Lab</title>
         <item>
+            <title>2.0</title>
+            <pubDate>Wed, 14 Jan 2026 10:54:58 -0500</pubDate>
+            <sparkle:version>2.0</sparkle:version>
+            <sparkle:shortVersionString>2.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+            <sparkle:releaseNotesLink>https://hurd300403.github.io/theportraitlab-releases/ThePortraitLab-v2.0.html</sparkle:releaseNotesLink>
+            <enclosure url="https://github.com/hurd300403/theportraitlab-releases/releases/download/v2.0/ThePortraitLab-v2.0.dmg" length="29184047" type="application/octet-stream" sparkle:edSignature="ZM5mN1UmF8zcvxVwaWRNfO0W5rfUGsRrIOVhl2YsmJG3jrKlMbQiMbaFr9gAJhuDXa5wnoJ0v8oBDOg5xsR2Bg=="/>
+            <sparkle:deltas>
+                <enclosure url="https://github.com/hurd300403/theportraitlab-releases/releases/download/v2.0/The%20Portrait%20Lab2.0-1.9.3.delta" sparkle:deltaFrom="1.9.3" length="1897114" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="862896" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="UnjsTCUofz5BQuY6TCggne5CHDL8X4jtidN2kXOXDItY5y96LXuek+5N3GP+gsO5W+qkrlGtFQtJ4Tkrhp9ADA=="/>
+                <enclosure url="https://github.com/hurd300403/theportraitlab-releases/releases/download/v2.0/The%20Portrait%20Lab2.0-1.9.2.delta" sparkle:deltaFrom="1.9.2" length="2608510" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="862896" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="582a2etSG0AEAVftaPlRzT2GM+s6LfdENcwukIVYER7TohOXmpMN4l3I94PJCMH2H60LQVs0uj4rdpSdJ09rCQ=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>1.9.3</title>
             <pubDate>Tue, 13 Jan 2026 16:32:46 -0500</pubDate>
             <sparkle:version>1.9.3</sparkle:version>
             <sparkle:shortVersionString>1.9.3</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:releaseNotesLink>https://hurd300403.github.io/theportraitlab-releases/ThePortraitLab-v1.9.3.html</sparkle:releaseNotesLink>
-            <enclosure url="https://github.com/hurd300403/theportraitlab-releases/releases/download/v1.9.3/ThePortraitLab-v1.9.3.dmg" length="29139567" type="application/octet-stream" sparkle:edSignature="ZDjPeM246y/+nANQnD6vF08GjHHK1yvXvvpfQshtJgNZrERoWg3o7rkVzkotbtiZWKMnBqdgRxhg0Ak1wGgvCw=="/>
-            <sparkle:deltas>
-                <enclosure url="https://github.com/hurd300403/theportraitlab-releases/releases/download/v1.9.3/The%20Portrait%20Lab1.9.3-1.9.2.delta" sparkle:deltaFrom="1.9.2" length="2468374" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="862896" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="wl89KGNDH/3lb7V8GnE5Mfwugva0Dc1q9NYgwvOMwytqLM8jSA1oFFzr8Dnb01Dsr5jn7B9LcGwq2MKS84BHDA=="/>
-            </sparkle:deltas>
+            <enclosure url="https://github.com/hurd300403/theportraitlab-releases/releases/download/v2.0/ThePortraitLab-v1.9.3.dmg" length="29139567" type="application/octet-stream" sparkle:edSignature="ZDjPeM246y/+nANQnD6vF08GjHHK1yvXvvpfQshtJgNZrERoWg3o7rkVzkotbtiZWKMnBqdgRxhg0Ak1wGgvCw=="/>
         </item>
         <item>
             <title>1.9.2</title>
@@ -21,7 +31,7 @@
             <sparkle:shortVersionString>1.9.2</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:releaseNotesLink>https://hurd300403.github.io/theportraitlab-releases/ThePortraitLab-v1.9.2.html</sparkle:releaseNotesLink>
-            <enclosure url="https://github.com/hurd300403/theportraitlab-releases/releases/download/v1.9.3/ThePortraitLab-v1.9.2.dmg" length="28948373" type="application/octet-stream" sparkle:edSignature="rxlJRB4PnmzNk5r2CoiCy/ZsAK9LcE7kYDzVA08PhAphgXM4sMyW8Dkx8JNbNy2H79QUXE3peSx8c/023HtUBw=="/>
+            <enclosure url="https://github.com/hurd300403/theportraitlab-releases/releases/download/v2.0/ThePortraitLab-v1.9.2.dmg" length="28948373" type="application/octet-stream" sparkle:edSignature="rxlJRB4PnmzNk5r2CoiCy/ZsAK9LcE7kYDzVA08PhAphgXM4sMyW8Dkx8JNbNy2H79QUXE3peSx8c/023HtUBw=="/>
         </item>
     </channel>
 </rss>
