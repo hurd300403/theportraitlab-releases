@@ -2,6 +2,7 @@
 <rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
     <channel>
         <title>Secondlight</title>
+        <!-- release notes revised 2026-08-06 -->
         <item>
             <title>3.7.5</title>
             <pubDate>Thu, 06 Aug 2026 10:04:42 -0400</pubDate>
