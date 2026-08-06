@@ -17,6 +17,8 @@ concurrency:
 
 jobs:
   build:
+    outputs:
+      feed_sha256: ${{ steps.validate.outputs.feed_sha256 }}
     runs-on: ubuntu-latest
     steps:
       - name: Check out release metadata
@@ -39,18 +41,25 @@ jobs:
           destination: ./_site
 
       - name: Validate the release feed
+        id: validate
         shell: bash
         run: |
           set -euo pipefail
 
           test -s _site/appcast.xml
-          test -s _site/Secondlight-v3.7.5.html
+
+          latest_version="$(grep -m1 -oE '<sparkle:shortVersionString>[^<]+' _site/appcast.xml | cut -d '>' -f 2)"
+          test -n "$latest_version"
+          test -s "_site/Secondlight-v${latest_version}.html"
 
           site_size_kb="$(du -sk _site | awk '{print $1}')"
           if (( site_size_kb > 10240 )); then
             echo "Refusing to deploy an unexpectedly large Pages artifact (${site_size_kb} KB)." >&2
             exit 1
           fi
+
+          feed_sha256="$(sha256sum _site/appcast.xml | awk '{print $1}')"
+          echo "feed_sha256=$feed_sha256" >> "$GITHUB_OUTPUT"
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v5
@@ -60,13 +69,116 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: https://hurd300403.github.io/theportraitlab-releases/
     runs-on: ubuntu-latest
     needs: build
     timeout-minutes: 35
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v5
-        with:
-          timeout: 1800000
+      - name: Publish and verify the live release feed
+        env:
+          EXPECTED_FEED_SHA256: ${{ needs.build.outputs.feed_sha256 }}
+          GH_TOKEN: ${{ github.token }}
+          PAGES_URL: https://hurd300403.github.io/theportraitlab-releases
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          api_version="2022-11-28"
+          repository_api="${GITHUB_API_URL}/repos/${GITHUB_REPOSITORY}"
+
+          live_feed_matches() {
+            local cache_key="$1"
+            local live_hash
+
+            live_hash="$(
+              curl --fail --silent --show-error --location \
+                --max-time 20 \
+                --retry 2 \
+                --retry-all-errors \
+                "${PAGES_URL}/appcast.xml?deployment=${GITHUB_SHA}-${cache_key}" \
+              | sha256sum \
+              | awk '{print $1}'
+            )" || return 1
+
+            [[ "$live_hash" == "$EXPECTED_FEED_SHA256" ]]
+          }
+
+          if live_feed_matches "already-live"; then
+            echo "The live appcast already matches ${EXPECTED_FEED_SHA256}."
+            exit 0
+          fi
+
+          artifact_id="$(
+            curl --fail --silent --show-error --location \
+              -H "Authorization: Bearer ${GH_TOKEN}" \
+              -H "Accept: application/vnd.github+json" \
+              -H "X-GitHub-Api-Version: ${api_version}" \
+              "${repository_api}/actions/runs/${GITHUB_RUN_ID}/artifacts?per_page=100" \
+            | jq -r '.artifacts[] | select(.name == "github-pages") | .id' \
+            | head -n 1
+          )"
+          test -n "$artifact_id"
+
+          oidc_token="$(
+            curl --fail --silent --show-error --location \
+              -H "Authorization: Bearer ${ACTIONS_ID_TOKEN_REQUEST_TOKEN}" \
+              "${ACTIONS_ID_TOKEN_REQUEST_URL}" \
+            | jq -r '.value'
+          )"
+          test -n "$oidc_token"
+
+          deployment_response="$(
+            jq -n \
+              --argjson artifact_id "$artifact_id" \
+              --arg pages_build_version "$GITHUB_SHA" \
+              --arg oidc_token "$oidc_token" \
+              '{
+                artifact_id: $artifact_id,
+                pages_build_version: $pages_build_version,
+                oidc_token: $oidc_token
+              }' \
+            | curl --fail --silent --show-error --location \
+                -X POST \
+                -H "Authorization: Bearer ${GH_TOKEN}" \
+                -H "Accept: application/vnd.github+json" \
+                -H "Content-Type: application/json" \
+                -H "X-GitHub-Api-Version: ${api_version}" \
+                --data-binary @- \
+                "${repository_api}/pages/deployments"
+          )"
+
+          deployment_id="$(
+            jq -r '.id // ((.status_url // "") | split("/") | last) // empty' \
+              <<< "$deployment_response"
+          )"
+          test -n "$deployment_id"
+          echo "Created Pages deployment ${deployment_id}."
+
+          for attempt in $(seq 1 180); do
+            if live_feed_matches "$attempt"; then
+              echo "Verified live appcast SHA-256 ${EXPECTED_FEED_SHA256}."
+              exit 0
+            fi
+
+            deployment_status="$(
+              curl --fail --silent --show-error --location \
+                -H "Authorization: Bearer ${GH_TOKEN}" \
+                -H "Accept: application/vnd.github+json" \
+                -H "X-GitHub-Api-Version: ${api_version}" \
+                "${repository_api}/pages/deployments/${deployment_id}" \
+              | jq -r '.status'
+            )"
+
+            case "$deployment_status" in
+              deployment_failed|deployment_content_failed|deployment_cancelled|deployment_lost)
+                echo "Pages reported terminal status: ${deployment_status}." >&2
+                exit 1
+                ;;
+            esac
+
+            echo "Attempt ${attempt}: ${deployment_status}; waiting for the live feed."
+            sleep 10
+          done
+
+          echo "Timed out waiting for the live appcast to match ${EXPECTED_FEED_SHA256}." >&2
+          exit 1
