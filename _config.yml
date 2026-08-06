@@ -1,0 +1,7 @@
+# The update archives are retained in Git for Sparkle delta generation, while
+# public downloads come from GitHub Release assets. Publishing these binary
+# archives through Pages duplicates them and can exceed Pages' 1 GB artifact
+# limit. The appcast and root-level HTML release notes remain public.
+exclude:
+  - updates
+  - old_updates
