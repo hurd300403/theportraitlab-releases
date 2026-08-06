@@ -21,24 +21,28 @@ jobs:
     steps:
       - name: Check out release metadata
         uses: actions/checkout@v7
+        with:
+          fetch-depth: 1
+          sparse-checkout: |
+            /*
+            !/updates/
+            !/old_updates/
+          sparse-checkout-cone-mode: false
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v6
 
-      - name: Stage the release feed
+      - name: Build the release feed
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+
+      - name: Validate the release feed
         shell: bash
         run: |
           set -euo pipefail
 
-          mkdir -p _site
-          cp appcast.xml index.html README.md _site/
-          find . -maxdepth 1 -type f -name '*.html' -exec cp {} _site/ \;
-
-          if [[ -d assets ]]; then
-            cp -R assets _site/assets
-          fi
-
-          touch _site/.nojekyll
           test -s _site/appcast.xml
           test -s _site/Secondlight-v3.7.5.html
 
