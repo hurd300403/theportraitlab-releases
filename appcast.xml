@@ -3,6 +3,22 @@
     <channel>
         <title>Secondlight</title>
         <item>
+            <title>3.20.1</title>
+            <pubDate>Tue, 03 Nov 2026 11:57:06 -0500</pubDate>
+            <sparkle:version>53</sparkle:version>
+            <sparkle:shortVersionString>3.20.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+            <sparkle:releaseNotesLink>https://hurd300403.github.io/theportraitlab-releases/Secondlight-v3.20.1.html</sparkle:releaseNotesLink>
+            <enclosure url="https://github.com/hurd300403/theportraitlab-releases/releases/download/v3.20.1/Secondlight-v3.20.1.dmg" length="55506266" type="application/octet-stream" sparkle:edSignature="qzk6onlxIf7m/gZjgpAmU6nLIKZhu34XkbCDzQSndVJn9iFn0UJuWoyqfTOpKGCjjzVXp6fQCOBwbSmoRXNYDQ==" />
+            <sparkle:deltas>
+                <enclosure url="https://github.com/hurd300403/theportraitlab-releases/releases/download/v3.20.1/Secondlight53-51.delta" sparkle:deltaFrom="51" length="2540158" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="860528" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="0TzUyEJViN3GZI6+iWMMuAHdNfBq7CaSuWmD9Dsrzpd/VpzeOrPMlQLzMHPLBkLNHXXMm96i2Mlpwdrx/05pDQ==" />
+                <enclosure url="https://github.com/hurd300403/theportraitlab-releases/releases/download/v3.20.1/Secondlight53-50.delta" sparkle:deltaFrom="50" length="3039874" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="860528" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="QlTHOLB/1lErYjgOJ24AkRMYT2OV9upSVSJ1EyAm4C58AWA+t6gt2ojKuwgEubg4YfL5jeEZ4BKzX0sOjv+KCg==" />
+                <enclosure url="https://github.com/hurd300403/theportraitlab-releases/releases/download/v3.20.1/Secondlight53-43.delta" sparkle:deltaFrom="43" length="4566582" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="860528" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="8d4MciG+Ll+pl3A5x9gDl8556a699d1kIlHfmY65hTXgLOCViCbP0XwE+kouvhcfdohjKa8+GbtAkutJyn1iAQ==" />
+                <enclosure url="https://github.com/hurd300403/theportraitlab-releases/releases/download/v3.20.1/Secondlight53-42.delta" sparkle:deltaFrom="42" length="4853326" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="860528" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="9fo6RQHpPZudR+P+N1OB5cM1td4Ac0e/YAgNmFHgyGaQB/J7j+AwZgkuj11cAjeWeSqtoG51hKJMEd3ivmkBBg==" />
+                <enclosure url="https://github.com/hurd300403/theportraitlab-releases/releases/download/v3.20.1/Secondlight53-41.delta" sparkle:deltaFrom="41" length="4890254" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="860528" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="it3mfUGDC0s5KRPUxAXkypw7Cr5Yv5YIOsTLBrBx/Bf6Q/RFbO9zpvaQ9OusH8ya4WxTJAjKFAoNosEuQDg5CQ==" />
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>3.20</title>
             <pubDate>Tue, 03 Nov 2026 10:21:11 -0500</pubDate>
             <sparkle:version>51</sparkle:version>
@@ -32,22 +48,6 @@
                 <enclosure url="https://github.com/hurd300403/theportraitlab-releases/releases/download/v3.19.2/Secondlight50-41.delta" sparkle:deltaFrom="41" length="4806046" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="860528" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="n29l9Q7ZZ1tCiUm+a8f6qI+OlDG3AZjBWlz55wAWqolupHsEGJKhWcsiUGGqKqKUx5bovfQ2YsoX14EWaeU5BA==" />
                 <enclosure url="https://github.com/hurd300403/theportraitlab-releases/releases/download/v3.19.2/Secondlight50-40.delta" sparkle:deltaFrom="40" length="4861190" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="860528" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="UkLuv1vhs2SDXcNePg5qWBhB+IcsYvuyh3R6g267lAuXesKw5VrOB+Ldx2uQf43j9ood4iArKOjgsZ9RRQP2Dg==" />
                 <enclosure url="https://github.com/hurd300403/theportraitlab-releases/releases/download/v3.19.2/Secondlight50-39.delta" sparkle:deltaFrom="39" length="4886170" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="860528" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Tcg24Zx9vayhk7VtUs89rOnJOkvOBMxpfGe5ypfPsozLYhWw15m4R6tLT4v/Ep6XUlq9iasOY5FvDqj9yeNxBA==" />
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>3.18</title>
-            <pubDate>Thu, 17 Sep 2026 13:20:39 -0400</pubDate>
-            <sparkle:version>43</sparkle:version>
-            <sparkle:shortVersionString>3.18</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
-            <sparkle:releaseNotesLink>https://hurd300403.github.io/theportraitlab-releases/Secondlight-v3.18.html</sparkle:releaseNotesLink>
-            <enclosure url="https://github.com/hurd300403/theportraitlab-releases/releases/download/v3.18/Secondlight-v3.18.dmg" length="54957641" type="application/octet-stream" sparkle:edSignature="Eo4X5ulCYyEZQaW3cb2uHEyP3PKKaPIE+PbgNn5DPn6eXpAvmtlCCpMyu4L+smdv9D67hGLvtBQ6CeJOhUJaCg==" />
-            <sparkle:deltas>
-                <enclosure url="https://github.com/hurd300403/theportraitlab-releases/releases/download/v3.18/Secondlight43-42.delta" sparkle:deltaFrom="42" length="3510730" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="860528" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="XJ5PRI8Xzh9FKl8l11bWkbLCSkCBqeTYiejlgqvw2AZIqq5sOMdYDbYFTjXThppz2ltd0CYhPxCgmcPVSTTUAQ==" />
-                <enclosure url="https://github.com/hurd300403/theportraitlab-releases/releases/download/v3.18/Secondlight43-41.delta" sparkle:deltaFrom="41" length="3650282" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="860528" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="8oh5Gc0v4OqZlb+fEu4XOpitOrcuehSTnoODg8t6IRpo3xILjUZ8VQP6IEhIo/4WIhQMwgtErpp+OwFCdKnvDg==" />
-                <enclosure url="https://github.com/hurd300403/theportraitlab-releases/releases/download/v3.18/Secondlight43-40.delta" sparkle:deltaFrom="40" length="3738818" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="860528" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="cOsJu7d9jrZQd3DYgsVolxl4VJGxeHc18ocjoDz5m+A/A/tD7ZLjSJi/GUIAO8bH/Cc1MkPC1t3Z6g9tRHdvDg==" />
-                <enclosure url="https://github.com/hurd300403/theportraitlab-releases/releases/download/v3.18/Secondlight43-39.delta" sparkle:deltaFrom="39" length="3802426" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="860528" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="JFr6BtliyUcS99pDljLfp9JK/Zm3cOUxMoQ4b875d7Yhob4XHYfKQg+QryXS1owONy0rR7EQCItcA+HX38tqAg==" />
-                <enclosure url="https://github.com/hurd300403/theportraitlab-releases/releases/download/v3.18/Secondlight43-38.delta" sparkle:deltaFrom="38" length="3925506" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="860528" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="/jush5xxYlxwmXggWQJ4NZsaNYOy1Y3qyy+08TYFAPNBypUFIRCXmlYw5JJwiSEmzs5xDtyBox6w4Ed7bbV+Bg==" />
             </sparkle:deltas>
         </item>
     </channel>
